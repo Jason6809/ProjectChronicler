@@ -1,0 +1,67 @@
+
+
+<div class="container-fluid my-3 min-vh-100">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div>
+        <%= form_with model: @contact, local: true do |f| %>
+          <div class="form-group">
+            <%= f.label :full_name, "Full Name (follow IC)" %>
+            <%= f.text_field :full_name, placeholder: "E.g.: John Doe", class: "form-control rounded-0 #{ "is-invalid" if f.object.errors.has_key?(:full_name) }" %>
+            <% if f.object.errors.has_key?(:full_name) %>
+              <div class="invalid-feedback">
+                <%= f.object.errors[:full_name].to_sentence.humanize %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :phone_num, "Contact Number (no \"-\")" %>
+            <%= f.text_field :phone_num, placeholder: "E.g.: 0123456789", class: "form-control rounded-0 #{ "is-invalid" if f.object.errors.has_key?(:phone_num) }" %>
+            <% if f.object.errors.has_key?(:phone_num) %>
+              <div class="invalid-feedback">
+                <%= f.object.errors[:phone_num].to_sentence.humanize %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :shop_name, "Shop Name" %>
+            <%= f.text_field :shop_name, placeholder: "", class: "form-control rounded-0 #{ "is-invalid" if f.object.errors.has_key?(:shop_name) }" %>
+            <% if f.object.errors.has_key?(:shop_name) %>
+              <div class="invalid-feedback">
+                <%= f.object.errors[:shop_name].to_sentence.humanize %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :ic_no, "IC Number (no \"-\")" %>
+            <%= f.text_field :ic_no, placeholder: "E.g.: 991122331234", class: "form-control rounded-0 #{ "is-invalid" if f.object.errors.has_key?(:ic_no) }" %>
+            <% if f.object.errors.has_key?(:ic_no) %>
+              <div class="invalid-feedback">
+                <%= f.object.errors[:ic_no].to_sentence.humanize %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :temp, "Temperature in Celsius" %>
+            <%= f.number_field :temp, step: "0.1", placeholder: "E.g.: 37.2", class: "form-control rounded-0 #{ "is-invalid" if f.object.errors.has_key?(:temp) }" %>
+            <% if f.object.errors.has_key?(:temp) %>
+              <div class="invalid-feedback">
+                <%= f.object.errors[:temp].to_sentence.humanize %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit "Check-in", class: "btn btn-success my-3 rounded-0 w-100" %>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

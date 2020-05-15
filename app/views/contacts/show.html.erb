@@ -1,0 +1,44 @@
+<div class="container-fluid my-3 min-vh-100" style="font-size: 11pt;">
+
+  <div class="d-flex flex-column justify-content-around align-items-center m-0 p-0" style="height: 80vh;">
+
+    <div class="h-auto w-100 py-5 px-3 bg-success text-light text-center rounded-0">
+      <h4 class="m-0 p-0">Check-in Successful</h4>
+    </div>
+
+    <div class="h-auto w-100 m-0 py-4 px-2 bg-light text-center rounded-0">
+      <p class="mb-2 p-0 font-weight-bold" style="text-decoration: underline;">
+        Profile :
+      </p>
+      <p class="m-0 p-0">
+        <%= @contact.full_name %>
+      </p>
+      <p class="m-0 p-0"> 
+        <%= @contact.ic_no %>
+      </p>
+      <p class="p-0">               
+        <%= @contact.phone_num %>
+      </p>
+      
+
+      <p class="mb-2 p-0 font-weight-bold" style="text-decoration: underline;">
+        Check-in Date & Time (24 Hrs) :
+      </p>
+      <p class="p-0">
+        <%= @contact.created_at.to_datetime.to_formatted_s(:long) %>
+      </p>
+
+      <p class="mb-2 p-0 font-weight-bold" style="text-decoration: underline;">
+        Check-in Date & Time (24 Hrs) :
+      </p>
+      <p class="m-0 p-0">
+        <%= @contact.temp %> &#8451;
+      </p>
+    </div>
+
+    <div class="h-auto w-100 py-2 px-3 bg-success text-light text-center rounded-0">
+      <h6 class="m-0 p-0">Thank for your cooperations</h6>
+    </div>
+  </div>
+
+</div>

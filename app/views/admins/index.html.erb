@@ -1,0 +1,13 @@
+<div class="container-fluid my-3 min-vh-100">
+  <div class="row">
+    <div class="col">
+      <div class="my-3 p-0">
+        <h3>Dashboard</h3>
+      </div>
+
+      <div class="my-3 p-0 overflow-auto">
+        <%= datagrid_table @contacts_grid, html:{ class: "table table-sm table-bordered table-striped table-hover", style: "font-size: 10pt; width: max-content;"} %>
+      </div>
+    </div>
+  </div>
+</div>

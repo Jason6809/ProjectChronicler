@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
-
+# Gem to create tables grids with sortable columns and filters. https://github.com/bogdan/datagrid
+gem 'datagrid'
+# Devise is a flexible authentication solution for Rails based on Warden. https://github.com/heartcombo/devise
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
@@ -40,6 +43,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Solargraph provides a comprehensive suite of tools for Ruby programming: intellisense, diagnostics, inline documentation, and type checking. https://github.com/castwide/solargraph
+  gem 'solargraph'
 end
 
 group :test do

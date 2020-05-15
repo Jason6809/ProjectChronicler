@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  phone_num: MyString
+  shop_name: MyString
+  ic_no: MyString
+  temp: 9.99
+
+two:
+  full_name: MyString
+  phone_num: MyString
+  shop_name: MyString
+  ic_no: MyString
+  temp: 9.99
